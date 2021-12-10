@@ -4,12 +4,13 @@
   "description": "clement exo",
   "main": "  server.js",
   "scripts": {
-    "start:dev": "nodemon server"
+    "server": "nodemon server"
   },
   "author": "clement dominique",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "faker": "^5.5.3"
   },
   "type": "module"
 }
