@@ -2,8 +2,6 @@ import express from "express";
 import faker from "faker";
 export const router = express.Router();
 
-
-
 router.get("/", (req, res) => {
     const students = [
         {
@@ -12,64 +10,29 @@ router.get("/", (req, res) => {
             cursus: faker.name.jobType(),
             average:faker.datatype.number({min:10,max:20})
         }
-    
     ]
     res.status(200).json({message:"Get all acces ",students })
 });
 
-const studentByFive = () => {
-    let hello = []
-    const students = [
-        {
-            id: faker.datatype.uuid(),
-            name: faker.name.firstName(),
-            cursus: faker.name.jobType(),
-            average: faker.datatype.number({ min: 10, max: 20 })
-        }, {
-            id: faker.datatype.uuid(),
-            name: faker.name.firstName(),
-            cursus: faker.name.jobType(),
-            average: faker.datatype.number({ min: 10, max: 20 })
-        }, {
-            id: faker.datatype.uuid(),
-            name: faker.name.firstName(),
-            cursus: faker.name.jobType(),
-            average: faker.datatype.number({ min: 10, max: 20 })
-        }, {
-            id: faker.datatype.uuid(),
-            name: faker.name.firstName(),
-            cursus: faker.name.jobType(),
-            average: faker.datatype.number({ min: 10, max: 20 })
-        }, {
-            id: faker.datatype.uuid(),
-            name: faker.name.firstName(),
-            cursus: faker.name.jobType(),
-            average: faker.datatype.number({ min: 10, max: 20 })
-        }
-    ]
-return students.map(stud =>stud.push(hello))
-}
 
 
-
-const foisCinq = () => {
-    for (let index = 0; index < 5; index++) {
+const fmultiplyArray = (param) => {
+    let array = []
         const students = [
             {
                 id: faker.datatype.uuid(),
                 name: faker.name.firstName(),
                 cursus: faker.name.jobType(),
                 average:faker.datatype.number({min:10,max:20})
-            }
-        
+            } 
         ]
-        
-    }
-
+for (let index = 0; index < param; index++) {
+    array.push(students)
+    } 
+    return array
 }
 
-
-console.log(studentByFive);
+console.log(fmultiplyArray(3));
 
 
 router.get("/:id", (req, res) => {
