@@ -1,0 +1,15 @@
+{
+  "name": "api-node_student",
+  "version": "1.0.0",
+  "description": "clement exo",
+  "main": "  server.js",
+  "scripts": {
+    "start:dev": "nodemon server"
+  },
+  "author": "clement dominique",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "type": "module"
+}
